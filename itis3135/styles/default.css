@@ -1,62 +1,100 @@
-/* Default CSS Stylesheet */
-
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
     color: #333;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
-/* Header Styling */
 header {
-    background: #333;
+    background-color: #2a4d69;
     color: #fff;
-    padding: 1rem 0;
+    padding: 10px;
     text-align: center;
 }
 
-/* Navigation Styling */
-nav {
-    background: #444;
-    color: #fff;
-    padding: 0.5rem;
+h1, h2 {
+    font-family: Georgia, serif;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #2a4d69;
+}
+
+nav.primary-nav, nav.secondary-nav {
+    background-color: #4b86b4;
+    padding: 10px;
     text-align: center;
 }
 
 nav a {
-    color: #fff;
+    color: #d4a017;
     text-decoration: none;
-    margin: 0 1rem;
+    margin: 0 10px;
 }
 
 nav a:hover {
+    color: #e8c547;
     text-decoration: underline;
 }
 
-/* Main Content Styling */
 main {
-    padding: 2rem;
-    background: #fff;
-    margin: 1rem auto;
-    max-width: 800px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Footer Styling */
 footer {
-    background: #333;
+    background-color: #2a4d69;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #d4a017;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e8c547;
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header, footer {
+        padding: 5px;
+    }
+
+    main {
+        padding: 10px;
+    }
 }
