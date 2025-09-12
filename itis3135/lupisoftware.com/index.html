@@ -5,23 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lupi Software Design Services</title>
   <style>
-    /* Embedded Stylesheet */
+    /* Stylesheet using coolors. I don't really like it yet but it's fine for a start */
+
+    /* http://coolors.co/1B1F3B-E07A5F-F4D35E-81B29A-F7F7F7
+       Dark navy: #1B1F3B
+       Soft coral: #E07A5F
+       Warm sand: #F4D35E
+       Muted teal: #81B29A
+       Off-white: #F7F7F7
+    */
 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background-color: #ffffff;
-      color: #333333;
+      background-color: #F7F7F7; /* page background */
+      color: #1B1F3B; /* dark navy text */
     }
 
     header {
       display: flex;
       align-items: center;
       padding: 1rem;
-      background-color: #f4f4f4;
-      border-bottom: 2px solid #cccccc;
+      background-color: #1B1F3B; /* dark navy header */
+      color: #F7F7F7; /* light text for contrast */
     }
 
     header img {
@@ -35,11 +43,17 @@
 
     main {
       padding: 1.5rem;
+      background-color: #F7F7F7; /* off-white section background */
     }
 
     h2 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
+      color: #E07A5F; /* soft coral for headers */
+    }
+
+    h3 {
+      color: #81B29A; /* muted teal for subheaders */
     }
 
     ul {
@@ -49,11 +63,11 @@
     }
 
     footer {
-      background-color: #f4f4f4;
+      background-color: #F4D35E; /* warm sand footer */
       padding: 1rem;
       text-align: center;
-      border-top: 2px solid #cccccc;
       font-size: 0.9rem;
+      color: #1B1F3B;
     }
 
     footer nav {
@@ -63,22 +77,26 @@
     footer a {
       margin: 0 0.5rem;
       text-decoration: none;
-      color: #333333;
+      color: #1B1F3B; /* dark navy links */
     }
 
     footer a:hover {
       text-decoration: underline;
+      color: #E07A5F; /* soft coral hover */
+    }
+
+    p, div {
+      margin-bottom: 1rem;
     }
   </style>
 </head>
-<!-- Body Element-->
 <body>
   <header>
     <a href="index.html">
-    <img src="/itis3135/images/lupisoftware_logo.png" 
-     alt="Lupi Software Design Logo" 
-     width="80" 
-     height="80">
+      <img src="/itis3135/images/lupisoftware_logo.png" 
+           alt="Lupi Software Design Logo" 
+           width="80" 
+           height="80">
     </a>
 
     <h1>Lupi Software Design</h1>
@@ -88,8 +106,9 @@
     <h2>Services</h2>
 
     <p>
-      Here at Lupi Software design, we specialize in delivering high-quality software solutions tailored to your needs. Our team of experienced developers is dedicated to creating innovative and efficient applications that help your business thrive.
+      Here at Lupi Software Design, we specialize in delivering high-quality software solutions tailored to your needs. Our team of experienced developers is dedicated to creating innovative and efficient applications that help your business thrive.
     </p>
+
     <h3>Why Choose Us?</h3>
     <ul>
       <li>100% satisfaction rate</li>
