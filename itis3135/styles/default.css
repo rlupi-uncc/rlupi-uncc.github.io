@@ -1,3 +1,4 @@
+/* Existing styles remain unchanged */
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
@@ -46,6 +47,7 @@ nav a:hover {
 main {
     padding: 20px;
     max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -69,22 +71,69 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Media Queries */
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed; /* Ensures balanced column widths */
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word; /* Prevents long content from overflowing */
+}
+
+table th {
+    background-color: #4b86b4;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #e9f0f7;
+}
+
+table tbody tr:hover {
+    background-color: #d0e1f9;
+}
+
+/* Responsive table */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    nav a {
+    table, table thead, table tbody, table th, table td, table tr {
         display: block;
-        margin: 5px 0;
+    }
+
+    table thead {
+        display: none; /* Hide headers on small screens */
+    }
+
+    table tbody tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    table tbody td {
+        padding: 10px;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    table tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 40%;
+        padding-right: 10px;
     }
 }
 
+/* Existing media queries */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
@@ -95,6 +144,7 @@ footer a:hover {
     }
 
     main {
+        width: 100%;
         padding: 10px;
     }
 }
