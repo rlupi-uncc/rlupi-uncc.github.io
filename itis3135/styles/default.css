@@ -1,16 +1,16 @@
-/* Existing styles remain unchanged */
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    font-size: 16px; /* Base font size */
 }
 
 header {
     background-color: #2a4d69;
     color: #fff;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
 }
 
@@ -19,11 +19,11 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em; /* Larger base for desktop */
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #2a4d69;
 }
 
@@ -36,7 +36,8 @@ nav.primary-nav, nav.secondary-nav {
 nav a {
     color: #d4a017;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
+    font-size: 1.1em;
 }
 
 nav a:hover {
@@ -55,7 +56,7 @@ footer {
     background-color: #2a4d69;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -76,7 +77,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    table-layout: fixed; /* Ensures balanced column widths */
+    table-layout: fixed;
 }
 
 table th, table td {
@@ -84,7 +85,7 @@ table th, table td {
     padding: 12px;
     text-align: left;
     vertical-align: top;
-    word-wrap: break-word; /* Prevents long content from overflowing */
+    word-wrap: break-word;
 }
 
 table th {
@@ -101,14 +102,44 @@ table tbody tr:hover {
     background-color: #d0e1f9;
 }
 
-/* Responsive table */
-@media (max-width: 768px) {
+/* Mobile (≤600px) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; 
+    }
+
+    header, footer {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em; 
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    nav.primary-nav, nav.secondary-nav {
+        padding: 8px;
+    }
+
+    nav a {
+        margin: 0 5px;
+        font-size: 0.9em; 
+    }
+
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
     table, table thead, table tbody, table th, table td, table tr {
         display: block;
     }
 
     table thead {
-        display: none; /* Hide headers on small screens */
+        display: none;
     }
 
     table tbody tr {
@@ -119,7 +150,7 @@ table tbody tr:hover {
     }
 
     table tbody td {
-        padding: 10px;
+        padding: 8px;
         border: none;
         display: flex;
         justify-content: space-between;
@@ -133,41 +164,77 @@ table tbody tr:hover {
     }
 }
 
-/* Existing media queries */
-@media (max-width: 480px) {
+/* Tablet (601px–1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
     body {
-        font-size: 14px;
+        font-size: 15px; 
     }
 
     header, footer {
-        padding: 5px;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 2.2em; 
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    nav.primary-nav, nav.secondary-nav {
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 1em;
     }
 
     main {
-        width: 100%;
+        width: 95%;
+        padding: 15px;
+    }
+
+    table th, table td {
         padding: 10px;
     }
 }
 
-@media (min-width: 1200px) {
+/* Desktop (>1024px) */
+@media (min-width: 1025px) {
     body {
-        font-size: 18px;
+        font-size: 16px; 
+    }
+
+    header, footer {
+        padding: 15px;
     }
 
     h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; 
     }
 
     h2 {
         font-size: 1.8em;
     }
 
+    nav.primary-nav, nav.secondary-nav {
+        padding: 12px;
+    }
+
+    nav a {
+        margin: 0 15px;
+        font-size: 1.1em;
+    }
+
     main {
-        max-width: 1400px;
-        padding: 30px;
+        max-width: 1200px;
+        width: 90%;
+        padding: 20px;
     }
 
     table th, table td {
-        padding: 15px;
+        padding: 12px;
     }
 }
