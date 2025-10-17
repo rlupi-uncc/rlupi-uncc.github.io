@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survival Hiking Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f1e9; 
+            color: #3c2f2f; 
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #2e4f2e;
+            color: #f4e4a6;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #f4e4a6; 
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #5a7f5a;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        section {
+            display: none;
+            background-color: #e6e0c9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .active {
+            display: block;
+        }
+
+        h2 {
+            color: #2e4f2e;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        section p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: #5a7f5a;
+            margin-top: 5px;
+        }
+
+        footer {
+            background-color: #2e4f2e;
+            color: #f4e4a6;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #f4e4a6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Survival Hiking Hub</h1>
+        <nav>
+            <ul>
+                <li><a onclick="showSection('what')">What</a> ~</li>
+                <li><a onclick="showSection('who')">Who</a> ~</li>
+                <li><a onclick="showSection('when')">When</a> ~</li>
+                <li><a onclick="showSection('where')">Where</a> ~</li>
+                <li><a onclick="showSection('how')">How</a> ~</li>
+                <li><a onclick="showSection('why')">Why</a> ~</li>
+                <li><a onclick="showSection('ai-prompts')">AI Prompts</a></li>
+            </ul>
+        </nav>
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    </header>
+
+    <main>
+        <section id="what" class="active">
+            <h2>What is Survival Hiking?</h2>
+            <p>Survival hiking combines the thrill of hiking in remote areas with practicing essential survival skills. It’s about exploring nature while being prepared to handle unexpected challenges using minimal gear.</p>
+            <p>This hobby tests your resourcefulness, teaching you to navigate, find food, build shelters, and stay safe in the wilderness.</p>
+            <p>It’s perfect for those who love adventure and want to connect deeply with nature while building confidence in their survival abilities.</p>
+            <figure>
+                <img src="images/campfire.jpg" alt="Survival hiking scene">
+                <figcaption>A Survival Campfire</figcaption>
+            </figure>
+        </section>
+
+        <section id="who">
+            <h2>Who We Are</h2>
+            <p>We are a community of outdoor enthusiasts passionate about survival hiking. From beginners to seasoned adventurers, we share a love for nature and self-reliance.</p>
+            <p>Our group includes experienced guides, hobbyists, and people of all backgrounds who exchange tips and experiences to grow our skills.</p>
+            <p>Join us to learn, explore, and embrace the challenge of self-reliance in nature.</p>
+            <figure>
+                <img src="images/group_hike.jpg" alt="Survival hiking group">
+                <figcaption>A group of hikers outside</figcaption>
+            </figure>
+        </section>
+
+        <section id="when">
+            <h2>When to Go Survival Hiking</h2>
+            <p>Spring and fall are ideal for survival hiking due to moderate temperatures and abundant natural resources.</p>
+            <p>Summer offers longer daylight but can be hot, requiring extra water planning. Winter hikes are for advanced hikers due to cold and limited natural resources.</p>
+            <p>Plan trips during stable weather windows to practice skills safely and effectively.</p>
+            <figure>
+                <img src="images/fall_mountains.jpg" alt="Seasonal hiking scene">
+                <figcaption>Survival hiking in autumn</figcaption>
+            </figure>
+        </section>
+
+        <section id="where">
+            <h2>Where to Survival Hike</h2>
+            <p>Great locations include the Appalachian Trail for its diverse terrain, the Pacific Crest Trail for remote challenges, or local state parks with wilderness areas.</p>
+            <p>Choose areas with varied ecosystems to practice skills like foraging, fire-building, and shelter construction.</p>
+            <p>Always research regulations and ensure you have permission to practice survival techniques in your chosen area.</p>
+            <figure>
+                <img src="images/pnw.jpg" alt="Wilderness trail">
+                <figcaption>A remote area in the Pacific Northwest</figcaption>
+            </figure>
+        </section>
+
+        <section id="how">
+            <h2>How to Start Survival Hiking</h2>
+            <p>Begin with basic skills: learn to read a map, start a fire, and build a shelter using natural materials.</p>
+            <p>Pack light but include essentials like a knife, water filter, and first-aid kit. Practice skills in safe environments before venturing into remote areas.</p>
+            <p>Join a survival hiking course or group to learn from experienced mentors and build confidence.</p>
+            <figure>
+                <img src="images/hiking_equipment.jpg" alt="Survival gear">
+                <figcaption>Survival hiking gear</figcaption>
+            </figure>
+        </section>
+
+        <section id="why">
+            <h2>Why Survival Hiking?</h2>
+            <p>Survival hiking builds resilience, self-reliance, and a deeper connection to nature.</p>
+            <p>It challenges you physically and mentally, offering a sense of accomplishment and peace in the wilderness.</p>
+            <p>It’s a way to unplug, learn practical skills, and prepare for unexpected situations in life.</p>
+            <figure>
+                <img src="images/peaceful.jpg" alt="Nature connection">
+                <figcaption>Embracing nature through survival hiking</figcaption>
+            </figure>
+        </section>
+
+        <section id="ai-prompts">
+            <h2>AI Prompts</h2>
+            <p>I used AI to proofread and clean up the project, with the prompt: "Can you cleam this up? (File pasted into AI chat)."</p>
+            <p>Images were not generated by AI (at least not directly by me). They are all royalty free, attribution-not-required images from <a href="https://pixabay.com">Pixabay</a>.</p>
+            <p>No additional AI prompts were used for actual content/code generation.</p>
+            <figure>
+                <img src="images/ai_usage.png" alt="AI usage">
+                <figcaption>AI robot interacting with nature</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Designed by <a href="../lupisoftware.html">&copy;Lupi Software Design</a>
+        </p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach((section) => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('what');
+        });
+    </script>
+</body>
+</html>
