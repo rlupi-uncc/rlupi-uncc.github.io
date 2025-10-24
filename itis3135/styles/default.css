@@ -14,15 +14,16 @@ header {
     text-align: center;
 }
 
-h1, h2 {
-    font-family: Georgia, serif;
-}
+
 
 h1 {
     font-size: 2.5em; /* Larger base for desktop */
+    font-family: Georgia, serif;
+
 }
 
 h2 {
+    font-family: Georgia, serif;
     font-size: 1.8em;
     color: #2a4d69;
 }
@@ -236,5 +237,23 @@ table tbody tr:hover {
 
     table th, table td {
         padding: 12px;
+    }
+
+    .quote-section {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .quote {
+        font-size: 1.2em;
+        font-style: italic;
+        color: #2a4d69;
+        margin-bottom: 5px;
+    }
+    
+    .quote-author {
+        font-size: 1em;
+        color: #555;
     }
 }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIS3135 | Randall Lupi's | Raging Lemur | Introduction Form</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Introduction Form</h2>
+        <h3>Please submit the form below.</h3>
+        <form id="introForm">
+            <label for="firstName">First Name:</label><br>
+            <input type="text" id="firstName" name="firstName" value="Randall" placeholder="Enter first name" required><br>
+
+            <label for="middleName">Middle Name (optional):</label><br>
+            <input type="text" id="middleName" name="middleName" placeholder="Enter middle name or initial"><br>
+
+            <label for="nickname">Nickname/Preferred Name (optional):</label><br>
+            <input type="text" id="nickname" name="nickname" placeholder="Enter nickname"><br>
+
+            <label for="lastName">Last Name:</label><br>
+            <input type="text" id="lastName" name="lastName" value="Lupi" placeholder="Enter last name" required><br>
+
+            <label for="mascotAdjective">Mascot Adjective:</label><br>
+            <input type="text" id="mascotAdjective" name="mascotAdjective" value="Raging" placeholder="Enter mascot adjective" required><br>
+
+            <label for="mascotAnimal">Mascot Animal:</label><br>
+            <input type="text" id="mascotAnimal" name="mascotAnimal" value="Lemur" placeholder="Enter mascot animal" required><br>
+
+            <label for="divider">Divider:</label><br>
+            <input type="text" id="divider" name="divider" value="|" placeholder="Enter divider (e.g., ~, |, ♥️)" required><br>
+
+            <label for="picture">Picture URL (or upload):</label><br>
+            <input type="text" id="picture" name="picture" value="images/professional-photo.jpg" placeholder="Enter image URL"><br>
+            <input type="file" id="pictureUpload" name="pictureUpload" accept="image/*"><br>
+
+            <label for="pictureCaption">Picture Caption:</label><br>
+            <input type="text" id="pictureCaption" name="pictureCaption" value="Headshot of Randall Lupi" placeholder="Enter picture caption" required><br>
+
+            <label for="personalStatement">Personal Statement:</label><br>
+            <textarea id="personalStatement" name="personalStatement" placeholder="Enter personal statement" required>I grew up in New Mexico, and moved to Charlotte for school. I grew up playing football and running track, so I'm a huge fan of sports and staying active. I also played the violin for over 10 years, so music is a big part of my life as well. My favorite thing about computer science is being presented with a difficult problem, and putting the pieces together to solve it.</textarea><br>
+
+            <label for="professionalBackground">Professional Background:</label><br>
+            <textarea id="professionalBackground" name="professionalBackground" placeholder="Enter professional background" required>I am currently a data science intern with the U.S department of homeland security, where I have worked for a little over a year now. This summer, I also had the opportunity to join Amazon over the summer as an SDE intern in NYC.</textarea><br>
+
+            <label for="academicBackground">Academic Background:</label><br>
+            <textarea id="academicBackground" name="academicBackground" placeholder="Enter academic background" required>I am a senior at UNC Charlotte, majoring in Computer Science with a concentration in Software Engineering. I plan to graduate with my BS degree in May 2026.</textarea><br>
+
+            <label for="primaryComputer">Primary Computer:</label><br>
+            <textarea id="primaryComputer" name="primaryComputer" placeholder="Enter primary computer details" required>I use an Apple MacBook (Silica M1) laptop, and primarily work from home or the library if I'm between classes.</textarea><br>
+
+            <label>Courses:</label><br>
+            <div id="courses">
+                <div class="course">
+                    <input type="text" name="courseDept" value="ITIS" placeholder="Department" required>
+                    <input type="text" name="courseNum" value="4350" placeholder="Number" required>
+                    <input type="text" name="courseName" value="Design Prototyping" placeholder="Course Name" required>
+                    <input type="text" name="courseReason" value="I'm taking this to learn more about building a good user experience." placeholder="Reason" required>
+                    <button type="button" class="deleteCourse">Delete</button><br>
+                </div>
+                <div class="course">
+                    <input type="text" name="courseDept" value="ITIS" placeholder="Department" required>
+                    <input type="text" name="courseNum" value="5122" placeholder="Number" required>
+                    <input type="text" name="courseName" value="Penetration Testing & Secure Programming" placeholder="Course Name" required>
+                    <input type="text" name="courseReason" value="I'm hoping to learn how to build secure, stable, reliable appications." placeholder="Reason" required>
+                    <button type="button" class="deleteCourse">Delete</button><br>
+                </div>
+                <div class="course">
+                    <input type="text" name="courseDept" value="ITCS" placeholder="Department" required>
+                    <input type="text" name="courseNum" value="5180" placeholder="Number" required>
+                    <input type="text" name="courseName" value="Mobile Application Development" placeholder="Course Name" required>
+                    <input type="text" name="courseReason" value="I'm taking this to gain more insight into how insustry professionals build mobile applications." placeholder="Reason" required>
+                    <button type="button" class="deleteCourse">Delete</button><br>
+                </div>
+            </div>
+            <button type="button" id="addCourse">Add Course</button><br>
+
+            <label for="quote">Quote:</label><br>
+            <textarea id="quote" name="quote" placeholder="Enter quote" required>“Listen boys… Sometimes there comes a time in a man’s time”</textarea><br>
+
+            <label for="quoteAuthor">Quote Author:</label><br>
+            <input type="text" id="quoteAuthor" name="quoteAuthor" value="Coach Flemming, My HS football coach" placeholder="Enter quote author" required><br>
+
+            <label for="funnyThing">Funny/Interesting Thing (optional):</label><br>
+            <textarea id="funnyThing" name="funnyThing" placeholder="Enter funny/interesting thing">A memorable item of mine is a first edition, holographic, base set charizard card that I opened with my brother in 2010.</textarea><br>
+
+            <label for="share">Something I Would Like to Share (optional):</label><br>
+            <textarea id="share" name="share" placeholder="Enter something to share"></textarea><br>
+
+            <label>Links:</label><br>
+            <div id="links">
+                <input type="text" name="linkText" value="GitHub" placeholder="Link Text" required>
+                <input type="url" name="linkUrl" value="https://github.com/rlupi-uncc" placeholder="Link URL" required><br>
+                <input type="text" name="linkText" value="GitHub.io" placeholder="Link Text" required>
+                <input type="url" name="linkUrl" value="https://rlupi-uncc.github.io" placeholder="Link URL" required><br>
+                <input type="text" name="linkText" value="Course.io" placeholder="Link Text" required>
+                <input type="url" name="linkUrl" value="https://rlupi-uncc.github.io/itis3135" placeholder="Link URL" required><br>
+                <input type="text" name="linkText" value="FreeCodeCamp" placeholder="Link Text" required>
+                <input type="url" name="linkUrl" value="https://www.freecodecamp.org/rlupiuncc" placeholder="Link URL" required><br>
+                <input type="text" name="linkText" value="LinkedIn" placeholder="Link Text" required>
+                <input type="url" name="linkUrl" value="https://www.linkedin.com/in/randall-lupi" placeholder="Link URL" required><br>
+            </div>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button" id="clear">Clear</button>
+        </form>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.js"></script>
+    <script src="scripts/introduction.js"></script>
+</body>
+</html>
