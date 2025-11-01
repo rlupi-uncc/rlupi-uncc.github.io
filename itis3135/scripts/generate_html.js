@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         html += `${indent(1)}<li>\n`;
         html += `${indent(2)}<strong>Current Courses:</strong>\n`;
         html += `${indent(2)}<ul>\n`;
-        courses.forEach(c => {
+        courses.forEach((c) => {
           html += `${indent(3)}<li>${c}</li>\n`;
         });
         html += `${indent(2)}</ul>\n`;
