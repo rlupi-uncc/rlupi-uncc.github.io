@@ -28,6 +28,12 @@ h2 {
     color: #2a4d69;
 }
 
+h3 {
+    font-family: Georgia, serif;
+    font-size: 1.4em;
+    color: #2a4d69;
+}
+
 nav.primary-nav, nav.secondary-nav {
     background-color: #4b86b4;
     padding: 10px;

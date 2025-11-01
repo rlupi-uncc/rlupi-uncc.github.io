@@ -6,6 +6,12 @@
     <title>ITIS3135 | Randall Lupi's | Raging Lemur | Introduction Form</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <!-- Highlight.js (for syntax highlighting in generated JSON/HTML views) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 <body>
     <div data-include="components/header.html"></div>
@@ -107,6 +113,8 @@
             </div>
 
             <button type="submit">Submit</button>
+            <button type="button" id="generateJSON">Generate JSON</button>
+            <button type="button" id="generateHTML">Generate HTML</button>
             <button type="reset">Reset</button>
             <button type="button" id="clear">Clear</button>
         </form>
@@ -115,5 +123,7 @@
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.js"></script>
     <script src="scripts/introduction.js"></script>
+    <script src="scripts/generate_json.js"></script>
+    <script src="scripts/generate_html.js"></script>
 </body>
 </html>

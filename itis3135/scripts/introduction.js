@@ -24,6 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.get('middleName'),
             formData.get('lastName')
         ].filter(Boolean).join(' ');
+        const mascot = [
+            formData.get('mascotAdjective'),
+            formData.get('mascotAnimal')
+        ].filter(Boolean).join(' ');
+        const divider = formData.get('divider') || '|';
         const courses = [];
         const courseDepts = formData.getAll('courseDept');
         const courseNums = formData.getAll('courseNum');
@@ -32,81 +37,69 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < courseDepts.length; i++) {
             courses.push(`${courseDepts[i]} ${courseNums[i]} - ${courseNames[i]}: ${courseReasons[i]}`);
         }
-        const links = [];
-        const linkTexts = formData.getAll('linkText');
-        const linkUrls = formData.getAll('linkUrl');
-        for (let i = 0; i < linkTexts.length; i++) {
-            links.push(`<a href="${linkUrls[i]}" target="_blank">${linkTexts[i]}</a>`);
-        }
+        const links = [
+            '<a href="https://webpages.uncc.edu/rlupi/itis3135/" target="_blank">UNCC Webspace</a>',
+            '<a href="https://github.com/rlupi-uncc" target="_blank">GitHub</a>',
+            '<a href="https://rlupi-uncc.github.io" target="_blank">GitHub.io</a>',
+            '<a href="https://rlupi-uncc.github.io/itis3135" target="_blank">Course.io</a>',
+            '<a href="https://www.freecodecamp.org/rlupiuncc" target="_blank">FreeCodeCamp</a>',
+            '<a href="https://www.codecademy.com/profiles/rlupiuncc" target="_blank">Codecademy</a>',
+            '<a href="https://www.linkedin.com/in/randall-lupi" target="_blank">LinkedIn</a>'
+        ];
 
-        document.body.innerHTML = `
-            <header>
-                <h1>Home | ${fullName}'s | ${formData.get('mascotAdjective')} ${formData.get('mascotAnimal')}</h1>
-                <nav class="primary-nav">
-                    <a href="index.html">ITIS3135</a> |
-                    <a href="contract.html">Contract</a> |
-                    <a href="introduction.html">Introduction</a> |
-                    <a href="website_evaluations.html">Website Evaluations</a> |
-                    <a href="fccfsjs_outline.html">FCCJS Outline</a>
-                </nav>
-                <nav class="secondary-nav">
-                    <a href="stuff/Cr@zy F!1ename.htm">Crappy Page</a> | 
-                    <a href="../itis3135/raginglemur/about.html">Raging Lemur</a> | 
-                    <a href="hobby/index.html">Hobby</a>
-                </nav>
-            </header>
-            <main>
-                <h2>Introduction Form</h2>
-                <figure>
-                    <img src="${imgSrc}" alt="Professional headshot of ${fullName}" style="max-width: 200px;">
-                    <figcaption>${formData.get('pictureCaption')}</figcaption>
-                </figure>
-                <ul>
-                    <li>
-                        <h3>Personal Background</h3>
-                        <p>${formData.get('personalStatement')}</p>
-                    </li>
-                    <li>
-                        <h3>Professional Background</h3>
-                        <p>${formData.get('professionalBackground')}</p>
-                    </li>
-                    <li>
-                        <h3>Academic Background</h3>
-                        <p>${formData.get('academicBackground')}</p>
-                    </li>
-                    <li>
-                        <h3>Primary Computer</h3>
-                        <p>${formData.get('primaryComputer')}</p>
-                    </li>
-                    <li>
-                        <h3>Current Courses</h3>
-                        <ul>
-                            ${courses.map((course) => `<li>${course}</li>`).join('')}
-                        </ul>
-                    </li>
-                    ${formData.get('funnyThing') ? `
-                    <li>
-                        <h3>Funny/Interesting Thing</h3>
-                        <p>${formData.get('funnyThing')}</p>
-                    </li>` : ''}
-                    ${formData.get('share') ? `
-                    <li>
-                        <h3>Something I Would Like to Share</h3>
-                        <p>${formData.get('share')}</p>
-                    </li>` : ''}
-                </ul>
-                <div class="quote-section">
-                    <p class="quote">“${formData.get('quote')}”</p>
-                    <p class="quote-author"><em>- ${formData.get('quoteAuthor')}</em></p>
-                </div>
-                <p><a href="intro_form.html">Reset Form</a></p>
-            </main>
-            <footer>
-                <nav>
-                    ${links.join('||')}
-                </nav>
-                <p>Designed by <a href="lupisoftware.com/" target="_blank">Lupi Software Design</a> &copy; 2025</p>
-            </footer>
+        // Update only <main> and <footer>, preserving existing <header>
+        document.querySelector('main').innerHTML = `
+            <h2>Introduction</h2>
+            <h3>${fullName} ${divider} ${mascot}</h3>
+            <figure>
+                <img src="${imgSrc}" alt="Professional headshot of ${fullName}" style="max-width: 200px;">
+                <figcaption>${formData.get('pictureCaption')}</figcaption>
+            </figure>
+            <ul>
+                <li>
+                    <h3>Personal Background</h3>
+                    <p>${formData.get('personalStatement')}</p>
+                </li>
+                <li>
+                    <h3>Professional Background</h3>
+                    <p>${formData.get('professionalBackground')}</p>
+                </li>
+                <li>
+                    <h3>Academic Background</h3>
+                    <p>${formData.get('academicBackground')}</p>
+                </li>
+                <li>
+                    <h3>Primary Computer</h3>
+                    <p>${formData.get('primaryComputer')}</p>
+                </li>
+                <li>
+                    <h3>Current Courses</h3>
+                    <ul>
+                        ${courses.map((course) => `<li>${course}</li>`).join('')}
+                    </ul>
+                </li>
+                ${formData.get('funnyThing') ? `
+                <li>
+                    <h3>Funny/Interesting Thing</h3>
+                    <p>${formData.get('funnyThing')}</p>
+                </li>` : ''}
+                ${formData.get('share') ? `
+                <li>
+                    <h3>Something I Would Like to Share</h3>
+                    <p>${formData.get('share')}</p>
+                </li>` : ''}
+            </ul>
+            <div class="quote-section">
+                <p class="quote">“${formData.get('quote')}”</p>
+                <p class="quote-author"><em>- ${formData.get('quoteAuthor')}</em></p>
+            </div>
+            <p><a href="intro_form.html">Reset Form</a></p>
+        `;
+        document.querySelector('footer').innerHTML = `
+            <nav style="white-space: normal;">
+                ${links.join('|| ')}
+            </nav>
+            <p>Designed by <a href="lupisoftware.com/" target="_blank">Lupi Software Design</a> &copy; 2025</p>
         `;
     }
 
