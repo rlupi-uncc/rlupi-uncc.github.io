@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neighborhood Association Project Overview</title>
+    <link rel="stylesheet" href="styles/default.css" />
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <!-- ====================== Project Overview ====================== -->
+        <section>
+            <h3>Project Overview</h3>
+            <p>
+                The <strong>Maplewood Neighborhood Association Website</strong> will serve as an
+                informational hub for residents and visitors. It will promote awareness of community
+                initiatives, highlight upcoming events, and showcase neighborhood projects through
+                engaging, read-only interactivity such as slideshows, galleries, and expandable content.
+            </p>
+
+            <h4>Intended Users</h4>
+            <ul>
+                <li>Neighborhood residents seeking news and updates</li>
+                <li>New homeowners learning about the community</li>
+                <li>Local organizations and partners supporting neighborhood efforts</li>
+            </ul>
+
+            <h4>Overview of Content</h4>
+            <ul>
+                <li>Home page with mission and latest updates</li>
+                <li>About page with history and leadership information</li>
+                <li>Events page listing upcoming and past activities</li>
+                <li>Gallery page showcasing photos of projects and gatherings</li>
+                <li>Map page highlighting local landmarks and resources</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Client Information</h3>
+            <ul>
+                <li><strong>Name:</strong> Cindy Brentwood</li>
+                <li><strong>Organization:</strong> Preston Forest Neighborhood Association</li>
+                <li><strong>Email:</strong> [private]</li>
+                <li><strong>Phone:</strong> [private]</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Wireframe</h3>
+            <p>
+                The following wireframe illustrates the general layout for the homepage, showing the navigation bar,
+                banner slideshow, announcements section, and quick links to other pages.
+            </p>
+            <figure>
+                <img src="images/wireframe.png" alt="Wireframe of homepage layout" width="600" />
+                <figcaption>Homepage wireframe created using Draw.io (Google Drive connected)</figcaption>
+            </figure>
+            <p>
+                <a href="https://drive.google.com/file/d/1XWv_UTF5GIBb0CY4sQLb-yX9Slrmeo4q/view?usp=sharing" target="_blank">
+                    View full-size wireframe on Google Drive
+                </a>
+            </p>
+        </section>
+
+        <!-- ====================== Site Map ====================== -->
+        <section>
+            <h3>Site Map</h3>
+            <p>
+                The site map below represents the navigation and logical structure of the Neighborhood Association website.
+                All five pages are connected via a shared navigation bar, allowing users to access any page from any location.
+            </p>
+            <figure>
+                <img src="images/sitemap.png" alt="Site map showing five main pages and links" width="600" />
+                <figcaption>Site map created using Draw.io</figcaption>
+            </figure>
+            <p>
+                <a href="https://drive.google.com/file/d/1cPj-6nTarDG1sTsKS0lBMB53ypXnGQmV/view?usp=sharing" target="_blank">
+                    Link to Google Drive
+                </a>
+        </section>
+
+        <section>
+            <h3>Page Design</h3>
+
+            <h4>Home (index.html)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> Introduce the neighborhood and display the latest community updates.</li>
+                <li><strong>Audience:</strong> Residents and public visitors.</li>
+                <li><strong>Content:</strong> Mission statement, slideshow banner, brief news blurbs.</li>
+                <li><strong>Interactivity:</strong> JavaScript slideshow and “read more” content toggles.</li>
+                <li><strong>Actions:</strong> Navigation to About, Events, Gallery, and Map pages.</li>
+            </ul>
+
+            <h4>About (about.html)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> Provide background, mission, and leadership details of the association.</li>
+                <li><strong>Audience:</strong> Current and prospective members.</li>
+                <li><strong>Content:</strong> History section, mission statement, board member list with photos.</li>
+                <li><strong>Interactivity:</strong> jQuery accordion for sections; hover tooltips on board photos.</li>
+            </ul>
+
+            <h4>Events (events.html)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> Display upcoming and past community events.</li>
+                <li><strong>Audience:</strong> Neighborhood residents and local supporters.</li>
+                <li><strong>Content:</strong> Event listings with dates and summaries.</li>
+                <li><strong>Interactivity:</strong> Event filter buttons (Upcoming/Past) and collapsible details.</li>
+                <li><strong>Actions:</strong> Links to related photos in Gallery.</li>
+            </ul>
+
+            <h4>Gallery (gallery.html)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> Showcase photos from neighborhood activities and beautification projects.</li>
+                <li><strong>Audience:</strong> Residents, media, and potential sponsors.</li>
+                <li><strong>Content:</strong> Categorized image gallery with captions.</li>
+                <li><strong>Interactivity:</strong> jQuery Lightbox and AJAX “load more” feature (read-only).</li>
+            </ul>
+
+            <h4>Map (map.html)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> Display a map of the neighborhood and local resources.</li>
+                <li><strong>Audience:</strong> Residents and newcomers to the community.</li>
+                <li><strong>Content:</strong> Embedded Google Map, meeting locations, safety and utility info.</li>
+                <li><strong>Interactivity:</strong> Expandable sections for resource categories; clickable map markers.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Dynamic Functionality</h3>
+            <p>
+                While the site is informational only, several read-only interactive elements will enhance usability and engagement:
+            </p>
+            <ul>
+                <li><strong>Home:</strong> JavaScript slideshow for banner images and toggleable “read more” sections.</li>
+                <li><strong>About:</strong> Accordion content panels and hover tooltips on board photos.</li>
+                <li><strong>Events:</strong> Filterable event listings using jQuery buttons and dynamic content reveal.</li>
+                <li><strong>Gallery:</strong> Lightbox photo viewer with AJAX-based image loading (read-only JSON source).</li>
+                <li><strong>Map:</strong> Expandable lists for local resources and interactive Google Maps embed.</li>
+            </ul>
+            <p>
+                <strong>Example Inspirations:</strong><br />
+                <a href="https://peachtree-city.org/" target="_blank">PTC Community Link</a> — example of a community information portal.<br />
+                <a href="https://nextdoor.com/" target="_blank">Nextdoor</a> — inspiration for neighborhood event visibility (read-only examples).
+            </p>
+        </section>     
+    </main>
+
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
