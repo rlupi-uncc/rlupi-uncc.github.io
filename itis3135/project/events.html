@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | Preston Forest Neighborhood Association</title>
+  <link rel="stylesheet" href="styles/project.css" />
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+  <h1>Preston Forest Neighborhood Association</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+ 
+
+
+  <section class="event-list">
+    <h2>Community Events</h2>
+    <!-- PINNED MONTHLY CLEANUP -->
+    <article class="event pinned" aria-labelledby="evt-cleanup-title">
+      <div class="event-header">
+        <span class="badge badge-pinned">Pinned</span>
+        <span class="badge badge-monthly">Monthly</span>              
+        <h3 id="evt-cleanup-title" class="event-title">Neighborhood Cleanup — First Saturday</h3>
+      </div>
+
+      <div class="event-meta">
+        <span><strong>Recurs:</strong> First Saturday of every month</span>
+        <span><strong>Next meetup:</strong> <time id="cleanup-next-date" datetime="2025-12-06">Calculating…</time></span>
+        <span><strong>Meet:</strong> Preston Forest Neighborhood Park</span>
+      </div>
+
+      <div class="event-details">
+        <p>
+          Keep Preston Forest beautiful! Join neighbors for a friendly litter pick-up and light grounds tidying.
+          Bring gloves if you have them; bags provided. Family-friendly.
+        </p>
+        <details>
+          <summary>What to bring</summary>
+          <p>Comfortable shoes, water bottle, work gloves (optional), hat/sunscreen.</p>
+        </details>
+      </div>
+    </article>
+
+    <!-- THANKSGIVING FOOD DRIVE (SINGLE-DATE EVENT) -->
+    <article class="event" aria-labelledby="evt-fooddrive-title">
+      <div class="event-header">
+        <h3 id="evt-fooddrive-title" class="event-title">Thanksgiving Food Drive</h3>
+      </div>
+
+      <div class="event-meta">
+        <!-- 2025-11-15 is a Saturday -->
+        <span><strong>Date:</strong> <time datetime="2025-11-15">Saturday, Nov 15, 2025</time></span>
+        <span><strong>Location:</strong> Preston Forest Park (main pavilion)</span>
+      </div>
+
+      <div class="event-details">
+        <p>
+          Help us support local families this season. We’re collecting non-perishable items
+          (canned vegetables, rice, pasta, shelf-stable milk, peanut butter, etc.). Drop-offs
+          welcome throughout the event window at the main pavilion.
+        </p>
+        <details>
+          <summary>Suggested donation list</summary>
+          <p>Canned proteins, canned vegetables/fruit, pasta/rice, cereal/oatmeal, shelf-stable milk, baby formula.</p>
+        </details>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  <nav class="footer-nav">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="events.html">Events</a> |
+    <a href="contect.html">Contact</a> |
+    <a href="map.html">Map</a>
+  </nav>
+  <p>&copy; 2025 Preston Forest Neighborhood Association | Designed by Randall Lupi, UNC Charlotte</p>
+</footer>
+
+<script src="scripts/firstSaturday.js"></script>
+</body>
+</html>
